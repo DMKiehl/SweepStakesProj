@@ -10,17 +10,18 @@ namespace SweepStakes
     {
         //member variables
         public string Name;
+        Dictionary<int, string> dictionary = new Dictionary<int, string>();
 
         //constructor
         public Sweepstakes(string name)
         {
-            this.Name = name;
+            Name = name;
         }
 
         //member methods
         public void RegisterContestant(Contestant contestant)
         {
-
+            dictionary.Add(contestant.RegistNumber, contestant.LastName);
         }
 
         public Contestant PickWinner()
