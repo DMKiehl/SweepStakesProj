@@ -10,7 +10,7 @@ namespace SweepStakes
     {
         //member variables
         public string Name;
-        Dictionary<int, string> dictionary = new Dictionary<int, string>();
+        Dictionary<int, Contestant> dictionary = new Dictionary<int, Contestant>();
         Random myRandom = new Random();
 
         //constructor
@@ -22,19 +22,26 @@ namespace SweepStakes
         //member methods
         public void RegisterContestant(Contestant contestant)
         {
-            dictionary.Add(contestant.RegistNumber, contestant.LastName);
+            UserInterface user = new UserInterface();
+            contestant = user.GetInformation();
+            dictionary.Add(contestant.RegistNumber, contestant);
         }
 
         public Contestant PickWinner()
         {
             int index = myRandom.Next(dictionary.Count);
+            KeyValuePair<int, Contestant> pair = dictionary.ElementAt(index);
 
-            return Contestant;
+            return pair.Value;
         }
 
         public void PrintContestantInfo(Contestant contestant)
         {
-
+            foreach (KeyValuePair<int, Contestant> sweepList in dictionary)
+            {
+                Console.WriteLine("Registrant Number: {0} First Name: {1} Last Name: {2} Email Address: {3}", sweepList.Key, sweepList.Value.FirstName, sweepList.Value.LastName, sweepList.Value.EmailAddress);
+                Console.ReadLine();
+            }
         }
     }
 }

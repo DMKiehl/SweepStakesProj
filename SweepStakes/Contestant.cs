@@ -14,7 +14,7 @@ namespace SweepStakes
         public string LastName;
         public string EmailAddress;
         public int RegistNumber;
-        List<Contestant> contestants = new List<Contestant>();
+        //List<Contestant> contestants = new List<Contestant>();
 
         //constructor
         public Contestant()
@@ -24,11 +24,7 @@ namespace SweepStakes
 
         //member methods
 
-        public void AddContestant()
-        {
-            UserInterface user = new UserInterface();
-            contestants.Add(user.GetInformation());
-        }
+        
 
     }
 }
