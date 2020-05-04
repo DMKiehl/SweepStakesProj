@@ -9,11 +9,12 @@ namespace SweepStakes
     class Sweepstakes
     {
         //member variables
+        public string Name;
 
         //constructor
         public Sweepstakes(string name)
         {
-
+            this.Name = name;
         }
 
         //member methods
