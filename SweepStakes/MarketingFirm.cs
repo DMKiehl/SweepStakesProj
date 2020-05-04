@@ -11,8 +11,16 @@ namespace SweepStakes
         //member variables
 
         //constructor
+        public MarketingFirm()
+        {
+
+        }
 
         //member methods
+        public void CreateSweepstakes()
+        {
+
+        }
 
     }
 }
