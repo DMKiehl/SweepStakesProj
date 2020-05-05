@@ -10,6 +10,10 @@ namespace SweepStakes
     {
         static void Main(string[] args)
         {
+            MarketingFirm firm = new MarketingFirm();
+            firm.CreateAManager();
+            firm.CreateSweepstakes();
+            firm.GetSweepstakes();
             
             
         }
