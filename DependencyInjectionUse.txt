@@ -1,3 +1,6 @@
 Dependency Injection
 
-I am using dependency injection within the MarketingFirm class. 
+I am using dependency injection within the MarketingFirm class. This design allows me to inject the 
+ISweepstakes Manager that will be used into the class so that it doesn't have to be created wtihin the class.
+By doing this I am loosely connecting the two classes which makes making changes to the program down the road easier. 
+This allows for the classes to be less dependent on one another.
