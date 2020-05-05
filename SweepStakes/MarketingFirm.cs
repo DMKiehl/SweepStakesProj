@@ -12,9 +12,9 @@ namespace SweepStakes
         public ISweepstakesManager manager;
 
         //constructor
-        public MarketingFirm(ISweepstakesManager newManager)
+        public MarketingFirm()
         {
-            manager = newManager;
+            
         }
 
         //member methods
@@ -26,6 +26,11 @@ namespace SweepStakes
 
         }
 
+        public void CreateManager()
+        {
+            CreateSweepstakesManager newManager = new CreateSweepstakesManager();
+            manager = newManager.CreateManager();
+        }
         public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
             manager.InsertSweepstakes(sweepstakes);
