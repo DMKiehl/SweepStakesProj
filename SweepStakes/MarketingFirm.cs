@@ -45,6 +45,7 @@ namespace SweepStakes
             CreateSweepstakesManager newManager = new CreateSweepstakesManager();
             manager = newManager.CreateManager();
         }
+
         public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
             manager.InsertSweepstakes(sweepstakes);

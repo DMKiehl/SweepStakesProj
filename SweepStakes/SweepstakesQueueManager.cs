@@ -37,6 +37,7 @@ namespace SweepStakes
                 }
                 
             }
+            Console.WriteLine("Entry you provided not valide. Returning default sweepstakes on file.");
             Sweepstakes sweepstakes = queue.Dequeue();
             return sweepstakes;
             //return;

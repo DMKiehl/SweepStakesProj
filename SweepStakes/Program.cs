@@ -13,6 +13,9 @@ namespace SweepStakes
             MarketingFirm firm = new MarketingFirm();
             firm.CreateAManager();
             firm.CreateSweepstakes();
+
+            firm.CreateSweepstakes();
+            firm.CreateSweepstakes();
             firm.GetSweepstakes();
             
             
