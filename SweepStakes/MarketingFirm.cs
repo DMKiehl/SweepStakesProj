@@ -12,20 +12,31 @@ namespace SweepStakes
         public ISweepstakesManager manager;
 
         //constructor
-        public MarketingFirm()
+        public MarketingFirm(ISweepstakesManager Manager)
         {
-            
+            manager = Manager;
         }
 
         //member methods
         public void CreateSweepstakes()
         {
             Console.WriteLine("Please enter name of sweepstakes?");
-            string input = Console.ReadLine();
-            Sweepstakes sweepstakes = new Sweepstakes(input);
+            Sweepstakes sweepstakes = new Sweepstakes(Console.ReadLine());
+            
             //AddContestants(sweepstakes);
             //InsertSweepstakes(sweepstakes);
 
+        }
+     
+        public void InsertSweepstakes(Sweepstakes sweepstakes)
+        {
+            manager.InsertSweepstakes(sweepstakes);
+        }
+
+        public Sweepstakes GetSweepstakes()
+        {
+            Sweepstakes newSweepstakes = manager.GetSweepstakes();
+            return newSweepstakes;
         }
 
         //Added additonally beyond the user requirements.
@@ -41,23 +52,6 @@ namespace SweepStakes
         //       input = Console.ReadLine();
         //    } while (input == "Yes");
         //}
-
-        public void CreateAManager()
-        {
-            CreateSweepstakesManager newManager = new CreateSweepstakesManager();
-            manager = newManager.CreateManager();
-        }
-
-        public void InsertSweepstakes(Sweepstakes sweepstakes)
-        {
-            manager.InsertSweepstakes(sweepstakes);
-        }
-
-        public Sweepstakes GetSweepstakes()
-        {
-            Sweepstakes newSweepstakes = manager.GetSweepstakes();
-            return newSweepstakes;
-        }
 
         //public void PickAWinner()
         //{
