@@ -10,11 +10,7 @@ namespace SweepStakes
     {
         static void Main(string[] args)
         {
-            Contestant contestant = new Contestant();
-            //contestant.AddContestant();
-            Sweepstakes sweepstakes = new Sweepstakes("lottery");
-            sweepstakes.RegisterContestant(contestant);
-            sweepstakes.PrintContestantInfo(contestant);
+            
             
         }
     }
