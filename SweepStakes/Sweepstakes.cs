@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace SweepStakes
 {
-    class Sweepstakes
+    public class Sweepstakes 
     {
         //member variables
         public string Name;
-        Dictionary<int, Contestant> dictionary = new Dictionary<int, Contestant>();
+        public Dictionary<int, Contestant> dictionary = new Dictionary<int, Contestant>();
         Random myRandom = new Random();
 
         //constructor
@@ -43,5 +43,7 @@ namespace SweepStakes
                 Console.ReadLine();
             }
         }
+
+      
     }
 }
